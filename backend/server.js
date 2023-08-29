@@ -11,4 +11,4 @@ app.get('/api/product/:id', (req, res) => {
   res.json(product)
 })
 
-app.listen(5000, console.log('Server is running on port 5000'))
+app.listen(3000, console.log('Server is running on port 5000'))
