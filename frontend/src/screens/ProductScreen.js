@@ -11,7 +11,7 @@ const ProductScreen = () => {
   const [qty, setQty] = useState(1)
   const params = useParams();
   const dispatch = useDispatch()
- // const navigate = useNavigate()
+ const navigate = useNavigate()
 
   const productDetails = useSelector((state) => state.productDetails)
   const {loading, error, product} = productDetails
@@ -20,9 +20,9 @@ const ProductScreen = () => {
     dispatch(listProductDetails(params.id))
   }, [dispatch, params])
  
-// const addToCartHandler = () => {
-    // navigate(`/cart/${params.id}?qty=${qty}`)
- // }
+const addToCartHandler = () => {
+  navigate(`/cart/${params.id}?qty=${qty}`)
+}
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
@@ -93,7 +93,7 @@ const ProductScreen = () => {
                   className='btn-block'
                   type='button'
                   disabled={product.countInStock === 0}
-                 // onClick={addToCartHandler}
+                 onClick={addToCartHandler}
                 >
                   Add To Cart
                 </Button>
