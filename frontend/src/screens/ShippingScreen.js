@@ -81,4 +81,4 @@ const ShippingScreen = () => {
 }
 
 
-export default ShippingScreen 
+export default ShippingScreen

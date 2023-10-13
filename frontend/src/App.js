@@ -7,6 +7,9 @@ import ProductScreen from './screens/ProductScreen.js';
 import React from 'react';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
+import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreen';
+
 
 
 
@@ -23,6 +26,8 @@ const App = () => {
               <Route path="/cart/:id" element={<CartScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/login" element={<LoginScreen />} />
+              <Route path="/shipping" element={<ShippingScreen />} />
+              <Route path="/payment" element={<PaymentScreen />} />
             </Routes>
           </Container>
         </main>
